@@ -1,0 +1,16 @@
+<view wx:for="{{book_list}}" wx:key="{{index}}" class='card_item'>
+  <van-card style="height:120px" title="{{item.title}}" desc="{{item.author[0]}}" price="{{item.price}}" thumb="{{item.image}}">
+    <view slot="tags">
+      <view wx:for="{{item.tags}}" wx:key="{{index}}" wx:for-index="idx" wx:for-item="tag">
+        <view wx:if="{{idx<2}}"> 
+          <van-tag type="danger">{{tag.name}}</van-tag>
+        </view>
+      </view>
+    </view>
+    <view slot="footer">
+      <van-button size="small" type="primary" data-id="{{item._id}}" bind:click="goBook">查看详情</van-button>
+    </view>
+  </van-card>
+</view>
+<van-button wx:if="{{isAuth}}" class='btnScan' type="primary" bind:click="scanCode">一键扫码</van-button>
+<van-button wx:else class='btnScan' type="primary" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" >一键扫码</van-button>

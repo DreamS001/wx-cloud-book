@@ -1,0 +1,37 @@
+<!--pages/bookDetail/bookDetail.wxml-->
+<view>
+    <view class="cover-container">
+        <image src="{{bookInfo.images.large}}"></image>
+    </view>
+    
+    <view class="book-meta">
+        <view class="meta-info">
+            <text class="book-title">图书标题<text style='font-size:30rpx;color:#c5c5c5;'>{{bookInfo.title}}</text></text>
+            <text class="other-meta">作者：{{bookInfo.author[0]}}</text>
+            <text class="other-meta">出版社：{{bookInfo.publisher}}</text>
+            <text class="other-meta">出版日期：{{bookInfo.pubdate}}</text>
+        </view>
+        <view class="range">
+            <text class="score">0</text>
+            <text class="viewers">0</text>
+        </view>
+    </view>
+
+    <view class="book-intro">
+        <view class="intro-header"><text class="book-title" style='color:#000;'>简介</text></view>
+        <text class="intro-content">
+            {{bookInfo.summary}}
+        </text>
+    </view>
+
+    <view class="book-intro">
+        <view class="intro-header"><text class="book-title" style='color:#000;'>作者</text></view>
+        <text class="intro-content">
+            {{bookInfo.author_intro}}
+        </text>
+    </view>
+</view>
+<!-- 
+<loading>
+    加载中...
+</loading> -->

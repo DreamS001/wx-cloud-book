@@ -1,0 +1,9 @@
+.card_item{
+  margin-bottom: 20rpx;
+}
+.btnScan{
+  position: fixed;
+  bottom: 60rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}

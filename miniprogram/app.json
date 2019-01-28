@@ -1,0 +1,36 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/bookDetail/bookDetail",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "我爱观书",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#979797",
+    "selectedColor": "#3fd6c7",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/home.png",
+        "selectedIconPath": "./images/home-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "个人中心",
+        "iconPath": "./images/mine.png",
+        "selectedIconPath": "./images/mine-active.png"
+      }
+    ]
+  }
+}
